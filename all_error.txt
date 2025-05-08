@@ -1,0 +1,11 @@
+1.after geting the response from get in the axios then it must be assign to the const data=response.data
+2.app.use(express.json())=> it is used to use the post oparations. it need to be inizialisee in the before the post operation
+3.here the  app.use(express.json()) here in the json need to be called in function  json()
+4.here the in the axios the (req,res) will not work because it is aepress instead the (response) only work in the axios.
+5. in map if to change the value then return statement must be given
+6. user.find((u)=>{return u.username==username})  if the {} are given then return statement must be given
+7.key pair must be give in json file incase of geting the element in the object   res.json({username: newtoken.username})
+8.http://localhost:3000/signup here http: is need to be give it is a mantadory.
+9.res.json({message: "Login successful",token: token  // ✅ include token in response}); here if we not include the token in the res than in the frontend it can't be used. so throught the res only the frond end can be used.
+10.in the middle the res(json{ message}) should not used if it used than the reset of the code will not work.You should not send a response like res.json({ message: "successful login" }) inside the middleware — that's the job of the route handler (/me), not the middleware.
+11.in the frontend res.json({username,password}) will not be work because in the previous the axois itself return the response so it can't be res further. res.json will not work .  res.json(...) as if you're working with a server response object, but res is already the response returned by axios, and axios responses don’t have a .json() method like fetch() responses.
