@@ -9,3 +9,6 @@
 9.res.json({message: "Login successful",token: token  // ✅ include token in response}); here if we not include the token in the res than in the frontend it can't be used. so throught the res only the frond end can be used.
 10.in the middle the res(json{ message}) should not used if it used than the reset of the code will not work.You should not send a response like res.json({ message: "successful login" }) inside the middleware — that's the job of the route handler (/me), not the middleware.
 11.in the frontend res.json({username,password}) will not be work because in the previous the axois itself return the response so it can't be res further. res.json will not work .  res.json(...) as if you're working with a server response object, but res is already the response returned by axios, and axios responses don’t have a .json() method like fetch() responses.
+12.while hashing throught the bcrypt password must be a string if it is a number than the null value will be return 
+13.user.push({username,hashedpassword})if i change the hashedpasswordin the push condition than you only need to get the password from the hashedpassword so use this password:hashedpassword
+14.et exist_user=user.find((u)=>{return u.username==username}) in here it return the uername only but we can access the that username all information like exist_user.password also can be accessed.
