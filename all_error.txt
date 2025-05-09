@@ -12,3 +12,5 @@
 12.while hashing throught the bcrypt password must be a string if it is a number than the null value will be return 
 13.user.push({username,hashedpassword})if i change the hashedpasswordin the push condition than you only need to get the password from the hashedpassword so use this password:hashedpassword
 14.et exist_user=user.find((u)=>{return u.username==username}) in here it return the uername only but we can access the that username all information like exist_user.password also can be accessed.
+15.if i studown the ubunto by wsl //shutdown comment the ubuntu does not work because it need to be restarted so retart the whole system itself.
+16.if the local system file is unable to delete than go to the ubunto and use rm -rf <file or foldername>
